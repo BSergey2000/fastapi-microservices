@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# Virtualenv folders
+venv/
+.env/
+.fastapi_env/
+fastapi/Lib/
+fastapi/Scripts/
+fastapi/pyvenv.cfg
+
+# Database and data
+/app/data/
+*.db
+data/
+
+# IDE
+.vscode/
+.idea/
+
+# Others
+*.log
+.DS_Store
