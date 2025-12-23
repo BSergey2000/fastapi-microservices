@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  todo-service:
+    build: ./todo_app
+    ports:
+      - "8000:80"
+    volumes:
+      - todo_data:/app/data
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  shorturl-service:
+    build: ./shorturl_app
+    ports:
+      - "8001:80"
+    volumes:
+      - shorturl_data:/app/data
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+
+volumes:
+  todo_data:
+  shorturl_data:
